@@ -24,6 +24,9 @@ export class DashboardComponent implements OnInit, OnDestroy {
     url1 : any;
     url2 : any;
     url3 : any;
+    url4 : any;
+    url5 : any;
+    url6 : any;
     constructor(private productService: ProductService, public layoutService: LayoutService) {
         this.subscription = this.layoutService.configUpdate$
         .pipe(debounceTime(25))
@@ -33,9 +36,11 @@ export class DashboardComponent implements OnInit, OnDestroy {
         this.test = "/"+this.test[1]+"/"+this.test[2]+"/"
         console.log(this.test);
         window.location.protocol=='https:'?this.url=this.url=window.location.origin+ this.test +"http/ecoleentreprise.sec.gouv.sn":this.url='http://ecoleentreprise.sec.gouv.sn';
-        window.location.protocol=='https:'?this.url1=this.url1=window.location.origin+ this.test +"http/pf2e.taktyl.io/page/dashboard?id=L1JobkdyUElOb1Z2NGlyb1JlMVhQQT09&add":this.url1='http://pf2e.taktyl.io/page/dashboard?id=L1JobkdyUElOb1Z2NGlyb1JlMVhQQT09&add';
+        window.location.protocol=='https:'?this.url1=this.url1=window.location.origin+ this.test +"https://pf2e.taktyl.io/page/dashboard?id=L1JobkdyUElOb1Z2NGlyb1JlMVhQQT09&add":this.url1='https://pf2e.taktyl.io/page/dashboard?id=L1JobkdyUElOb1Z2NGlyb1JlMVhQQT09&add';
         window.location.protocol=='https:'?this.url2=this.url2=window.location.origin+ this.test +"http/pf2e.sn":this.url2='http://pf2e.sn';
         window.location.protocol=='https:'?this.url3=this.url3=window.location.origin+ this.test +"http/pf2e.sn/mail":this.url3='http://pf2e.sn/mail';
+        window.location.protocol=='https:'?this.url4=this.url4=window.location.origin+ this.test +"https://pf2e.taktyl.io/gstock/dashboard?id=L1JobkdyUElOb1Z2NGlyb1JlMVhQQT09&add_g":this.url4='https://pf2e.taktyl.io/gstock/dashboard?id=L1JobkdyUElOb1Z2NGlyb1JlMVhQQT09&add_g';
+        window.location.protocol=='https:'?this.url5=this.url5=window.location.origin+ this.test +"https://pf2e.taktyl.io/page/budget?id=L1JobkdyUElOb1Z2NGlyb1JlMVhQQT09":this.url5='https://pf2e.taktyl.io/page/budget?id=L1JobkdyUElOb1Z2NGlyb1JlMVhQQT09';
         console.log(this.url);
     }
 
