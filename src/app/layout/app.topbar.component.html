@@ -1,0 +1,86 @@
+<style>
+    .layout-topbar,
+    .layout-topbar-logo,
+    .p-link {
+        background-color: #006D3A;
+        /*background-color: rgb(22, 22, 140);*/
+        color: white;
+        text-align: left;
+        position: absolute;
+        left: 0px;
+        justify-content: left;
+
+    }
+    .pf2e{
+        text-align: center;
+        position: absolute;
+        left:40%;
+        justify-content: center;
+
+    }
+    .layout-topbar .layout-topbar-logo img {
+        height: 2.5rem;
+        margin-right: 0.5rem;
+        margin-left: 1.7rem;
+    }
+    @media all and (min-width: 390px) and (max-width: 844px){
+        .layout-topbar,
+        .layout-topbar-logo,
+        .p-link {
+            background-color: #006D3A;
+            /*background-color: rgb(22, 22, 140);*/
+            color: white;
+            text-align: left;
+            position: absolute;
+            left: 0;
+            justify-content: left;
+
+        }
+        .pf2e{
+            text-align: center;
+            position: absolute;
+            left:20%;
+            margin-top:10%;
+            justify-content: center;
+        }
+    }
+    @media all and (min-width: 344px) and (max-width: 884px){
+        .pf2e{
+
+            text-align: center;
+            margin-top:10%;
+            position: absolute;
+            left:20%;
+            justify-content: center;
+        }
+    }
+    @media all and (min-width: 768px) and (max-width: 1024px){
+        .pf2e{
+
+            text-align: center;
+            margin-top: 0%;
+            position: absolute;
+            left: 53%;
+        }
+    }
+</style>
+<div class="layout-topbar">
+    <a class="layout-topbar-logo" routerLink="">
+        <!--        <img src="assets/layout/images/{{appMain.config.dark ? 'logo-white' : 'logo-dark'}}.svg" alt="logo">-->
+        <img src="assets/layout/images/pf2e.png" alt="logo">
+<!--        <img src="pf2e.png" alt="logo">-->
+        <span>PORTAIL WEB DU PF2E</span>
+    </a>
+
+<!--    <a class="p-link layout-menu-button layout-topbar-button" href="#" (click)="appMain.toggleMenu($event)">
+        <i class="pi pi-bars"></i>
+    </a>
+
+    <a class="p-link layout-topbar-menu-button layout-topbar-button" href="#" (click)="appMain.toggleTopMenu($event)">
+        <i class="pi pi-ellipsis-v"></i>
+    </a>-->
+    <div class="pf2e">
+         Programme de Formation Ecole Entreprise
+    </div>
+
+</div>
