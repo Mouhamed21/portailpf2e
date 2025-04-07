@@ -37,12 +37,12 @@ export class DashboardComponent implements OnInit, OnDestroy {
         this.test = "/"+this.test[1]+"/"+this.test[2]+"/"
         console.log(this.test);
         this.url = "https://ecoleentreprise.sec.gouv.sn";
-        this.url1 = "https://pf2e.taktyl.io/page/dashboard?id=L1JobkdyUElOb1Z2NGlyb1JlMVhQQT09&add";
+        this.url1 = "https://pf2e.taktyl.io";
         this.url2="https://pf2e.sn";
         this.url3="https://pf2e.sn/mail/";
-        this.url4="https://pf2e.taktyl.io/gstock/dashboard?id=L1JobkdyUElOb1Z2NGlyb1JlMVhQQT09&add_g";
-        this.url5="https://pf2e.taktyl.io/page/budget?id=L1JobkdyUElOb1Z2NGlyb1JlMVhQQT09";
-        this.url6="https://pf2e.taktyl.io/page/conge_annuel?id=L1JobkdyUElOb1Z2NGlyb1JlMVhQQT09&add";
+        this.url4="https://pf2e.taktyl.io";
+        this.url5="https://pf2e.taktyl.io/portail";
+        this.url6="https://pf2e.sn/webmail/";
         //https://pf2e.sn/portailweb//http/ecoleentreprise.sec.gouv.sn
         //window.location.protocol=='https:'?this.url=this.url=window.location.origin+ this.test +"http/ecoleentreprise.sec.gouv.sn":this.url='http://ecoleentreprise.sec.gouv.sn';
         //window.location.protocol=='https:'?this.url=this.url=window.location.origin+ this.test +"https://pf2e.sn/portailweb//http/ecoleentreprise.sec.gouv.sn":this.url='https://pf2e.sn/portailweb//http/ecoleentreprise.sec.gouv.sn';
