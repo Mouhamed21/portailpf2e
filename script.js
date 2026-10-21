@@ -1,25 +1,10 @@
+// Date et année
 document.addEventListener('DOMContentLoaded', () => {
-    const cards = document.querySelectorAll('.card');
+    const now = new Date();
+    const date = now.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
 
-    cards.forEach(card => {
-        card.addEventListener('click', function(e) {
-            let ripple = document.createElement('span');
-            ripple.classList.add('ripple-effect');
-            
-            let rect = this.getBoundingClientRect();
-            let x = e.clientX - rect.left;
-            let y = e.clientY - rect.top;
-            
-            ripple.style.left = `${x}px`;
-            ripple.style.top = `${y}px`;
-            
-            this.appendChild(ripple);
-            
-            setTimeout(() => {
-                ripple.remove();
-            }, 600);
-        });
-    });
+    document.getElementById('today').textContent = date.charAt(0).toUpperCase() + date.slice(1);
+    document.getElementById('year').textContent = now.getFullYear();
 });
 
 // Enregistrement du Service Worker
