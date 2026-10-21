@@ -159,23 +159,40 @@ a:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
 @media (min-width: 1001px) and (min-height: 600px) {
     html, body { height: 100%; overflow: hidden; }
     .wrap { height: 100vh; height: 100dvh; display: flex; flex-direction: column; }
-    .section { flex: 1; min-height: 0; gap: 12px; }
-    .section.first { margin-top: 16px; }
-    .section + .section { margin-top: 12px; }
-    .tiles { flex: 1; min-height: 0; grid-template-rows: minmax(0, 1fr); }
+    /* Toutes les tailles sont des multiples de --u : l'interface s'adapte
+       à la largeur ET à la hauteur de l'écran (petit portable comme grand écran). */
+    :root { --u: clamp(9px, min(0.8vw, 1.5vh), 17px); }
 
-    /* Éléments compactés pour tenir dans la hauteur de la fenêtre */
-    .site-header { padding: 12px 0; }
-    .brand img { width: 40px; height: 40px; }
-    .tile { min-height: 0; padding: 18px; gap: 12px; }
-    .tile.feat { padding: 22px; gap: 12px; }
-    .chip { width: 38px; height: 38px; border-radius: 10px; }
-    .chip svg { width: 20px; height: 20px; }
-    .tile-title { font-size: 17px; }
-    .tile-desc { font-size: 13px; }
-    .feat .tile-title { font-size: 28px; }
-    .feat .tile-desc { font-size: 14px; }
-    .sublink { margin-top: 6px; padding-top: 8px; }
-    .site-footer { margin-top: 8px; padding: 4px 0 12px; }
+    .wrap { max-width: calc(var(--u) * 118); padding: 0 calc(var(--u) * 3.4); }
+    .section { flex: 1; min-height: 0; gap: calc(var(--u) * 1.26); }
+    .section.first { margin-top: calc(var(--u) * 1.7); }
+    .section + .section { margin-top: calc(var(--u) * 1.26); }
+    .tiles { flex: 1; min-height: 0; gap: calc(var(--u) * 1.7); grid-template-rows: minmax(0, 1fr); }
+
+    .site-header { padding: calc(var(--u) * 1.26) 0; }
+    .brand { gap: calc(var(--u) * 1.5); }
+    .brand img { width: calc(var(--u) * 4.2); height: calc(var(--u) * 4.2); }
+    .brand-name { font-size: calc(var(--u) * 1.7); }
+    .brand-sub, .today { font-size: calc(var(--u) * 1.37); }
+    .section-head { gap: calc(var(--u) * 1.5); }
+    .section-head h2, .section-head .count { font-size: calc(var(--u) * 1.26); }
+
+    .tile { min-height: 0; padding: calc(var(--u) * 1.9); gap: calc(var(--u) * 1.26); border-radius: calc(var(--u) * 1.7); }
+    .tile.feat { padding: calc(var(--u) * 2.3); gap: calc(var(--u) * 1.26); }
+    .chip { width: calc(var(--u) * 4); height: calc(var(--u) * 4); border-radius: calc(var(--u) * 1.05); }
+    .chip svg { width: calc(var(--u) * 2.1); height: calc(var(--u) * 2.1); }
+    .arr { width: calc(var(--u) * 1.9); height: calc(var(--u) * 1.9); }
+    .arrw { width: calc(var(--u) * 2.1); height: calc(var(--u) * 2.1); }
+    .feat .deco { width: calc(var(--u) * 23); height: calc(var(--u) * 23); right: calc(var(--u) * -3); bottom: calc(var(--u) * -5); }
+    .tile-body { gap: calc(var(--u) * 0.6); }
+    .tile-title { font-size: calc(var(--u) * 1.8); }
+    .tile-desc, .tile-desc.mono { font-size: calc(var(--u) * 1.37); }
+    .feat .tile-title { font-size: calc(var(--u) * 2.95); }
+    .feat .tile-desc { font-size: calc(var(--u) * 1.5); }
+    .feat .badge { font-size: calc(var(--u) * 1.26); padding: calc(var(--u) * 0.5) calc(var(--u) * 1.05); }
+    .sublink { margin-top: calc(var(--u) * 0.65); padding-top: calc(var(--u) * 0.85); font-size: calc(var(--u) * 1.37); gap: calc(var(--u) * 0.85); }
+    .sublink svg, .site-footer svg { width: calc(var(--u) * 1.6); height: calc(var(--u) * 1.6); }
+
+    .site-footer { margin-top: calc(var(--u) * 0.85); padding: calc(var(--u) * 0.4) 0 calc(var(--u) * 1.26); font-size: calc(var(--u) * 1.37); }
     .site-footer .help a { min-height: 0; }
 }
