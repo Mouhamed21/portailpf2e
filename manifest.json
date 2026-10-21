@@ -1,0 +1,24 @@
+{
+  "name": "Portail WEB DU PF2E",
+  "short_name": "PF2E",
+  "description": "Programme de Formation Ecole Entreprise",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0a6b38",
+  "theme_color": "#0a6b38",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "logo-pf2e-192-V2.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo-pf2e-512-V2.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
