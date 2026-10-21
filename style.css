@@ -153,3 +153,17 @@ a:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
     .tile, .chip, .arr, .arrw, .deco { transition: none; }
     .tile:hover { transform: none; }
 }
+
+/* --- Mode portail : page sans défilement sur écran d'ordinateur ---
+   Sur petit écran (mobile, tablette, fenêtre très basse), le défilement reste actif. */
+@media (min-width: 1001px) and (min-height: 700px) {
+    html, body { height: 100%; overflow: hidden; }
+    .wrap { height: 100vh; height: 100dvh; display: flex; flex-direction: column; }
+    .section { flex: 1; min-height: 0; }
+    .section.first { margin-top: 24px; }
+    .section + .section { margin-top: 20px; }
+    .tiles { flex: 1; min-height: 0; grid-template-rows: minmax(0, 1fr); }
+    .tile { min-height: 0; }
+    .site-footer { margin-top: 12px; padding: 8px 0 16px; }
+    .site-footer .help a { min-height: 0; }
+}

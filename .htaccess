@@ -1,0 +1,7 @@
+# Le navigateur doit toujours vérifier auprès du serveur si les fichiers ont changé
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|css|js|json)$">
+    Header set Cache-Control "no-cache"
+    Header unset Expires
+  </FilesMatch>
+</IfModule>
