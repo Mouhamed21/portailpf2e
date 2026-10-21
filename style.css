@@ -156,14 +156,26 @@ a:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
 
 /* --- Mode portail : page sans défilement sur écran d'ordinateur ---
    Sur petit écran (mobile, tablette, fenêtre très basse), le défilement reste actif. */
-@media (min-width: 1001px) and (min-height: 700px) {
+@media (min-width: 1001px) and (min-height: 600px) {
     html, body { height: 100%; overflow: hidden; }
     .wrap { height: 100vh; height: 100dvh; display: flex; flex-direction: column; }
-    .section { flex: 1; min-height: 0; }
-    .section.first { margin-top: 24px; }
-    .section + .section { margin-top: 20px; }
+    .section { flex: 1; min-height: 0; gap: 12px; }
+    .section.first { margin-top: 16px; }
+    .section + .section { margin-top: 12px; }
     .tiles { flex: 1; min-height: 0; grid-template-rows: minmax(0, 1fr); }
-    .tile { min-height: 0; }
-    .site-footer { margin-top: 12px; padding: 8px 0 16px; }
+
+    /* Éléments compactés pour tenir dans la hauteur de la fenêtre */
+    .site-header { padding: 12px 0; }
+    .brand img { width: 40px; height: 40px; }
+    .tile { min-height: 0; padding: 18px; gap: 12px; }
+    .tile.feat { padding: 22px; gap: 12px; }
+    .chip { width: 38px; height: 38px; border-radius: 10px; }
+    .chip svg { width: 20px; height: 20px; }
+    .tile-title { font-size: 17px; }
+    .tile-desc { font-size: 13px; }
+    .feat .tile-title { font-size: 28px; }
+    .feat .tile-desc { font-size: 14px; }
+    .sublink { margin-top: 6px; padding-top: 8px; }
+    .site-footer { margin-top: 8px; padding: 4px 0 12px; }
     .site-footer .help a { min-height: 0; }
 }
