@@ -117,9 +117,14 @@ a:hover { color: var(--green-dark); }
 .feat:hover .arrw { transform: translate(3px, -3px); }
 
 /* Tuile courriel : conteneur avec deux liens */
-.tile.multi:hover { transform: translateY(-4px); }
+.tile.multi { position: relative; cursor: pointer; }
 .tile.multi .tile-title { color: var(--ink); text-decoration: none; }
+/* Le lien principal couvre toute la tuile ; le lien « Mot de passe » reste cliquable au-dessus */
+.stretched::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.stretched:focus-visible { outline: none; }
+.stretched:focus-visible::after { outline: 2px solid var(--green); outline-offset: 3px; }
 .sublink {
+    position: relative; z-index: 2;
     display: inline-flex; align-items: center; gap: 8px;
     margin-top: 10px; padding-top: 12px; border-top: 1px solid #ebeee9;
     font-size: 13px; font-weight: 500; color: var(--green); text-decoration: none;
